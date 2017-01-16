@@ -77,4 +77,50 @@ Public Class Form1
         Jisuan()
     End Sub
 
+    Private Sub TextBox_Volume_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox_Volume.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            Dim V As String
+            mV = Regex.Match(TextBox_Volume.Text, zzV)
+            V = mV.Groups(2).ToString
+            Select Case V
+                Case "M", "Mb", "m", "mb", "MB", "mB"
+                    V = " MB"
+                Case Else
+                    V = " GB"
+            End Select
+            TextBox_Volume.Text = mV.Groups(1).ToString & V
+            Jisuan()
+        End If
+    End Sub
+
+    Private Sub TextBox_Speed_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox_Speed.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            Dim S As String
+            mS = Regex.Match(TextBox_Speed.Text, zzS)
+            S = mS.Groups(2).ToString
+            Select Case S
+                Case "M", "Mb", "m", "mb", "MB", "mB", "M/s", "Mb/s", "m/s", "mb/s", "MB/s", "mB/s", "M/S", "Mb/S", "m/S", "mb/S", "MB/S", "mB/S"
+                    S = " MB/S"
+                Case Else
+                    S = " KB/S"
+            End Select
+            TextBox_Speed.Text = mS.Groups(1).ToString & S
+            Jisuan()
+        End If
+    End Sub
+
+    Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll
+        Dim Speed As Integer
+        If TrackBar1.Value > 0 And TrackBar1.Value <= 50 Then
+            Speed = TrackBar1.Value * 20.48
+        ElseIf TrackBar1.Value > 50 And TrackBar1.Value <= 70 Then
+            Speed = (TrackBar1.Value - 50) * 51.2 + 1024
+        ElseIf TrackBar1.Value > 70 And TrackBar1.Value <= 90 Then
+            Speed = (TrackBar1.Value - 70) * 102.4 + 2048
+        Else
+            Speed = (TrackBar1.Value - 90) * 204.8 + 4096
+        End If
+        TextBox_Speed.Text = Speed & " KB/S"
+    End Sub
+
 End Class
