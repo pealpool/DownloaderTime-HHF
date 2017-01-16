@@ -12,10 +12,10 @@
     End Function
 
     Private Sub TextBox_SpeedChanged(sender As Object, e As EventArgs) Handles TextBox_Speed.TextChanged
-        Jisuan(TextBox_Volume.Text, TextBox_Speed.Text)
+
     End Sub
 
-    Private Sub TTextBox_VolumeChanged(sender As Object, e As EventArgs) Handles TextBox_Volume.TextChanged
-        DataVolume(TextBox_Volume.Text)
+    Private Sub TextBox_Volume_TextChanged(sender As Object, e As EventArgs) Handles TextBox_Volume.TextChanged
+
     End Sub
 End Class

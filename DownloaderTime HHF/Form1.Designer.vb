@@ -22,7 +22,6 @@ Partial Class Form1
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox_Volume = New System.Windows.Forms.TextBox()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -35,15 +34,9 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox_Speed = New System.Windows.Forms.TextBox()
+        Me.TextBox_Volume = New System.Windows.Forms.TextBox()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TextBox_Volume
-        '
-        Me.TextBox_Volume.Location = New System.Drawing.Point(49, 9)
-        Me.TextBox_Volume.Name = "TextBox_Volume"
-        Me.TextBox_Volume.Size = New System.Drawing.Size(73, 20)
-        Me.TextBox_Volume.TabIndex = 0
         '
         'TrackBar1
         '
@@ -51,7 +44,7 @@ Partial Class Form1
         Me.TrackBar1.Maximum = 100
         Me.TrackBar1.Name = "TrackBar1"
         Me.TrackBar1.Size = New System.Drawing.Size(321, 45)
-        Me.TrackBar1.TabIndex = 2
+        Me.TrackBar1.TabIndex = 3
         Me.TrackBar1.TickFrequency = 10
         '
         'Label1
@@ -140,7 +133,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(215, 12)
+        Me.Label10.Location = New System.Drawing.Point(189, 12)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(31, 13)
         Me.Label10.TabIndex = 12
@@ -148,10 +141,18 @@ Partial Class Form1
         '
         'TextBox_Speed
         '
-        Me.TextBox_Speed.Location = New System.Drawing.Point(254, 9)
+        Me.TextBox_Speed.Location = New System.Drawing.Point(226, 9)
         Me.TextBox_Speed.Name = "TextBox_Speed"
-        Me.TextBox_Speed.Size = New System.Drawing.Size(73, 20)
-        Me.TextBox_Speed.TabIndex = 13
+        Me.TextBox_Speed.Size = New System.Drawing.Size(101, 20)
+        Me.TextBox_Speed.TabIndex = 2
+        '
+        'TextBox_Volume
+        '
+        Me.TextBox_Volume.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.TextBox_Volume.Location = New System.Drawing.Point(49, 9)
+        Me.TextBox_Volume.Name = "TextBox_Volume"
+        Me.TextBox_Volume.Size = New System.Drawing.Size(96, 20)
+        Me.TextBox_Volume.TabIndex = 1
         '
         'Form1
         '
@@ -172,14 +173,13 @@ Partial Class Form1
         Me.Controls.Add(Me.TrackBar1)
         Me.Controls.Add(Me.TextBox_Volume)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "DownloadTimeHHF"
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox_Volume As TextBox
     Friend WithEvents TrackBar1 As TrackBar
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -192,4 +192,5 @@ Partial Class Form1
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents TextBox_Speed As TextBox
+    Friend WithEvents TextBox_Volume As TextBox
 End Class
