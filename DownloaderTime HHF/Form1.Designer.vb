@@ -31,7 +31,7 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label_Out = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox_Speed = New System.Windows.Forms.TextBox()
         Me.TextBox_Volume = New System.Windows.Forms.TextBox()
@@ -60,7 +60,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 125)
+        Me.Label2.Location = New System.Drawing.Point(10, 79)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(122, 25)
         Me.Label2.TabIndex = 4
@@ -120,15 +120,16 @@ Partial Class Form1
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "4 M"
         '
-        'Label9
+        'Label_Out
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(142, 119)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(190, 31)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "00 h 00 m 00 s"
+        Me.Label_Out.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_Out.Location = New System.Drawing.Point(19, 104)
+        Me.Label_Out.Name = "Label_Out"
+        Me.Label_Out.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label_Out.Size = New System.Drawing.Size(308, 73)
+        Me.Label_Out.TabIndex = 11
+        Me.Label_Out.Text = "00 h 00 m 00 s"
+        Me.Label_Out.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label10
         '
@@ -142,6 +143,7 @@ Partial Class Form1
         'TextBox_Speed
         '
         Me.TextBox_Speed.Location = New System.Drawing.Point(226, 9)
+        Me.TextBox_Speed.MaxLength = 10
         Me.TextBox_Speed.Name = "TextBox_Speed"
         Me.TextBox_Speed.Size = New System.Drawing.Size(101, 20)
         Me.TextBox_Speed.TabIndex = 2
@@ -150,6 +152,7 @@ Partial Class Form1
         '
         Me.TextBox_Volume.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TextBox_Volume.Location = New System.Drawing.Point(49, 9)
+        Me.TextBox_Volume.MaxLength = 10
         Me.TextBox_Volume.Name = "TextBox_Volume"
         Me.TextBox_Volume.Size = New System.Drawing.Size(96, 20)
         Me.TextBox_Volume.TabIndex = 1
@@ -161,7 +164,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(348, 186)
         Me.Controls.Add(Me.TextBox_Speed)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -172,6 +174,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TrackBar1)
         Me.Controls.Add(Me.TextBox_Volume)
+        Me.Controls.Add(Me.Label_Out)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "DownloadTimeHHF"
@@ -189,7 +192,7 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents Label_Out As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents TextBox_Speed As TextBox
     Friend WithEvents TextBox_Volume As TextBox
